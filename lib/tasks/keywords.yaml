@@ -1,0 +1,15 @@
+---
+java:
+  - "java视频"
+  - "java教学视频"
+  - "java视频教程"
+
+php:
+  - "php视频"
+  - "php教学视频"
+  - "php视频教程"
+
+python:
+  - "python视频"
+  - "python教学视频"
+  - "python视频教程"

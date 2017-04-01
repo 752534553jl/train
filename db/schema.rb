@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161210032422) do
+ActiveRecord::Schema.define(version: 20170401124803) do
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name",       default: "", null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
+  create_table "keywords", force: :cascade do |t|
+    t.string   "name",            default: "",  null: false
+    t.string   "natural_rank",    default: "0", null: false
+    t.string   "right_hot_rank",  default: "0", null: false
+    t.string   "bottom_hot_rank", default: "0", null: false
+    t.integer  "category_id"
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

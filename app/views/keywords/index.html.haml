@@ -1,0 +1,30 @@
+- provide(:title, t('.title'))
+
+.container
+  .col-md-8
+    - @categories.each do |category|
+      .panel.panel-primary
+        .panel-heading
+          = category.name
+        .panel-body
+          %table.table.table-bordered
+            %thead
+              %th.col-md-3
+                关键词
+              %th.col-md-3
+                综合排序排名
+              %th.col-md-3
+                右侧掌柜热卖排名
+              %th.col-md-3
+                底部掌柜热卖排名
+            %tbody
+              - category.keywords.each do |keyword|
+                %tr
+                  %td
+                    = keyword.name
+                  %td
+                    = keyword.natural_rank 
+                  %td
+                    = keyword.right_hot_rank 
+                  %td
+                    = keyword.bottom_hot_rank 
