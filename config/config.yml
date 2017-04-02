@@ -1,0 +1,13 @@
+defaults: &defaults
+  shops:
+    my_shop: "名诚智选店"
+    test_shop: "天胜教育服务专营店"
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

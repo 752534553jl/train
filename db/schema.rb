@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20170401124803) do
   create_table "keywords", force: :cascade do |t|
     t.string   "name",            default: "",  null: false
     t.string   "natural_rank",    default: "0", null: false
+    t.string   "hot_rank",        default: "0", null: false
     t.string   "right_hot_rank",  default: "0", null: false
     t.string   "bottom_hot_rank", default: "0", null: false
     t.integer  "category_id"

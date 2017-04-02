@@ -3,6 +3,7 @@ class CreateKeywords < ActiveRecord::Migration
     create_table :keywords do |t|
       t.string :name,              null: false, default: ""
       t.string :natural_rank,      null: false, default: "0"
+      t.string :hot_rank,          null: false, default: "0"
       t.string :right_hot_rank,    null: false, default: "0"
       t.string :bottom_hot_rank,   null: false, default: "0"
 
